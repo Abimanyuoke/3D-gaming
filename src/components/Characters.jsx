@@ -1,10 +1,54 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { FaStar } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import Spline from "@splinetool/react-spline";
+
+// The customCursor component to accept
+function CustomCursor({ isHovering3D }) {
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const cursorRef = useRef(null)
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            setPosition({ x: e.clientX, y: e.clientY })
+        }
+
+        document.addEventListener("mousemove", handleMouseMove)
+        return () => {
+            document.removeEventListener("mousemove", handleMouseMove)
+        }
+    })
+
+    return (
+        <motion.div
+        ref={cursorRef}
+            className="fixed top-0 left-0 z-50 pointer-events-none mix-blend-difference"
+            animate={{
+                x: position.x = (isHovering3D ? 12 : 15),
+                y: position.y = (isHovering3D ? 12 : 15),
+                scale: isHovering3D ? 1.5 : 1
+            }}
+            transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 28,
+                mass: 0.5
+            }}>
+
+                <motion.div className={`rounded-full ${isHovering3D ? "bg-violet-500" : "bg-white"}`} animate={{ width: isHovering3D ? "24px" : "40px", height: isHovering3D ? "24px" : "40px"}} transition={{duration: 0.2}}/>
+                {isHovering3D && (
+                    <motion.div className="absolute inset-0 bg-transition rounded-full border border-violet-500" initial={{scale: 0.5, opacity: 0}} animate={{scale: 2, opacity: 0.5}} transition={{duration: 1, repeat: Number, POSITIVE_INFINITY}}/>
+                ) }
+            
+            
+        </motion.div>
+    )
+}
 
 export default function Characters() {
 
     const [selectedAvatar, setSelectedAvatar] = useState("VIKI")
+    const [cursorInModellArea, setCursorInModellArea] = useState (false)
 
     const Avatar = {
         VIKI: {
@@ -26,10 +70,20 @@ export default function Characters() {
     }
 
     const currentAvatar = Avatar[selectedAvatar];
+    const handle3DAreaMouseEnter = () => {
+        setCursorInModellArea(true)
+    }
+
+    const handle3DAreaMouseLeave = () => {
+        setCursorInModellArea(false)
+    }
 
 
     return (
         <div className="relative w-full h-screen overflow-hidden mb-[10%]">
+
+            <CustomCursor isHovering3D={cursorInModellArea}/>
+
             <div className="relative z-10 pt-6 text-center">
                 <h1 className="text-5xl font-bold tracking-widest md:-mb-14 mb-8" style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.7)" }}>
                     FIGHTERS
@@ -133,14 +187,14 @@ export default function Characters() {
 
                 {/* right slide */}
                 <AnimatePresence mode="wait">
-                    <div className="relative md:w-2/4 w-full md:h-full flex items-center justify-center h-80 overflow-hidden">
+                    <div className="relative md:w-2/4 w-full md:h-full flex items-center justify-center h-80 overflow-hidden" onMouseEnter={handle3DAreaMouseEnter} onMouseLeave={handle3DAreaMouseLeave}>
                         {selectedAvatar === "VIKI" ? (
                             <motion.div key="VIKI" className="absolute inset-0" initial={{ x: "100%" }} animate={{ x: "0" }} exit={{ x: "-100%" }} transition={{ duration: 0.5 }}>
-                                <img src="public\images\VIKI.png" alt="image Viki" />
+                                <Spline scene="https://prod.spline.design/Gr2kX3AWw7IpObSG/scene.splinecode" />
                             </motion.div>
                         ) : selectedAvatar === "EVA" ? (
                             <motion.div key="EVA" className="absolute inset-0" initial={{ x: "100%" }} animate={{ x: "0" }} exit={{ x: "-100%" }} transition={{ duration: 0.5 }}>
-                                <img src="public\images\EVA.png" alt="image Eva" />
+                                <Spline scene="https://prod.spline.design/HD7HomWWSREh4Cy6/scene.splinecode" />
                             </motion.div>
                         ) : null}
 
