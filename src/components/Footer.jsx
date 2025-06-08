@@ -9,19 +9,19 @@ export default function Footer() {
             <img src="public\images\illu-text.png" alt="Illu-Text" className="h-10" />
             <img src="public\images\illu-logo.png" alt="Illu-Logo" className="h-16 md:inline hidden" />
             <div className="flex gap-4">
-                <div className="flex items-center">
+                <div className="flex items-center cursor-pointer">
                     <FaLinkedin/>
                     <a href="#" className="md:text-3xl text-2xl hover:text-violet-600 duration-300"></a>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center cursor-pointer">
                     <FaSquareInstagram/>
                     <a href="#" className="md:text-3xl text-2xl hover:text-violet-600 duration-300"></a>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center cursor-pointer">
                     <FaDiscord/>
                     <a href="#" className="md:text-3xl text-2xl hover:text-violet-600 duration-300"></a>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center cursor-pointer">
                     <FaFacebookSquare/>
                     <a href="#" className="md:text-3xl text-2xl hover:text-violet-600 duration-300"></a>
                 </div>

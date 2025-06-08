@@ -50,7 +50,10 @@ export default function Arena() {
                         <img src="public\images\bento-card5.png" alt="card 5" />
 
                         <button className="flex absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
-                            <FaExternalLinkAlt /> Buy Now
+                            <div className="absolute flex p-4">
+                                <FaExternalLinkAlt />
+                                Buy Now
+                            </div>
                         </button>
                     </div>
                 </div>
