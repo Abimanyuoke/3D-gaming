@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { FaStar } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Characters() {
 
@@ -110,7 +111,7 @@ export default function Characters() {
                         </div>
 
                         {/* EVA */}
-                        <div className="relative bg-gray-900/80 backdrop-blur-sm rounded-lg border flex lg:flex-row flex-col justify-between p-3 px-12 items-center cursor-pointer transition-all duration-300"  onClick={() => setSelectedAvatar("EVA")}>
+                        <div className="relative bg-gray-900/80 backdrop-blur-sm rounded-lg border flex lg:flex-row flex-col justify-between p-3 px-12 items-center cursor-pointer transition-all duration-300" onClick={() => setSelectedAvatar("EVA")}>
                             <div className="text-lg mb-2">
                                 EVA
                             </div>
@@ -129,6 +130,22 @@ export default function Characters() {
                         </div>
                     </div>
                 </div>
+
+                {/* right slide */}
+                <AnimatePresence mode="wait">
+                    <div className="relative md:w-2/4 w-full md:h-full flex items-center justify-center h-80 overflow-hidden">
+                        {selectedAvatar === "VIKI" ? (
+                            <motion.div key="VIKI" className="absolute inset-0" initial={{ x: "100%" }} animate={{ x: "0" }} exit={{ x: "-100%" }} transition={{ duration: 0.5 }}>
+                                <img src="public\images\VIKI.png" alt="image Viki" />
+                            </motion.div>
+                        ) : selectedAvatar === "EVA" ? (
+                            <motion.div key="EVA" className="absolute inset-0" initial={{ x: "100%" }} animate={{ x: "0" }} exit={{ x: "-100%" }} transition={{ duration: 0.5 }}>
+                                <img src="public\images\EVA.png" alt="image Eva" />
+                            </motion.div>
+                        ) : null}
+
+                    </div>
+                </AnimatePresence>
             </div>
         </div>
     )
