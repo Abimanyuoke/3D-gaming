@@ -15,7 +15,7 @@ export default function Arena() {
                     <div className="relative overflow-hidden rounded-3xl border border-white aspect-[4.4/4] transform transition-transform duration-300 hover:scale-105">
                         {/* Card 1 */}
                         <div className="absolute h-full w-full">
-                            <img src="src/assets/public/images/bento-card1.png" alt="card-1" />
+                            <img src="src/assets/images/bento-card1.png" alt="card-1" />
 
                             <button className="flex absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
                                 <IoStorefrontOutline /> NFT Store
@@ -24,30 +24,30 @@ export default function Arena() {
                     </div>
                     {/* Card 2 */}
                     <div className="relative rounded-3xl border border-white aspect-[4.5/4] overflow-hidden transform transition-transform duration-300 hover:scale-105 ">
-                        <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/public/videos/bento-card2.mp4"></video>
+                        <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/videos/bento-card2.mp4"></video>
                     </div>
                 </div>
                 <div className="md:col-span-2 space-y-4 md:space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                         {/* Card 3 */}
                         <div className="relative overflow-hidden rounded-3xl border border-white aspect-square transform transition-transform duration-300 hover:scale-105">
-                            <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/public/videos/bento-card3.mp4"></video>
+                            <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/videos/bento-card3.mp4"></video>
                             <h1 className="absolute transform -translate-x-1/2 bottom-2 left-1/2 font-extrabold text-2xl z-10 ">Scoriox</h1>
                         </div>
 
                         <div className="relative overflow-hidden rounded-3xl border border-white aspect-square transform transition-transform duration-300 hover:scale-105">
-                            <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/public/videos/bento-card4.mp4"></video>
+                            <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/videos/bento-card4.mp4"></video>
                             <h1 className="absolute transform -translate-x-1/2 bottom-2 left-1/2 font-extrabold text-2xl z-10 ">Floralynx</h1>
                         </div>
 
                         <div className="relative overflow-hidden rounded-3xl border border-white aspect-square transform transition-transform duration-300 hover:scale-105">
-                            <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/public/videos/bento-card5.mp4"></video>
+                            <video autoPlay loop muted playsInline className="w-full h-full object-cover" src="src/assets/videos/bento-card5.mp4"></video>
                             <h1 className="absolute transform -translate-x-1/2 bottom-2 left-1/2 font-extrabold text-2xl z-10 ">Titanor</h1>
                         </div>
                     </div>
                     {/* Card 6 */}
                     <div className="relative overflow-hidden rounded-3xl border border-white aspect-[16/9] md:col-span-2 transform transition-transform duration-300 hover:scale-[1.02] ">
-                        <img src="src/assets/public/images/bento-card5.png" alt="card 5" />
+                        <img src="src/assets/images/bento-card5.png" alt="card 5" />
 
                         <button className="flex absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
                             <div className="absolute flex p-4">
