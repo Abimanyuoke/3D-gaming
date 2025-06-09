@@ -1,7 +1,7 @@
 import { IoStorefrontOutline } from "react-icons/io5";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import card1 from "../assets/images/bento-card1.png"
-import card2 from "../assets/videos/bento-card2.mp4" 
+import card2 from "../assets/videos/bento-card2.mp4"
 import card3 from "../assets/videos/bento-card3.mp4"
 import card4 from "../assets/videos/bento-card4.mp4"
 import card5 from "../assets/videos/bento-card5.mp4"
@@ -23,7 +23,7 @@ export default function Arena() {
                         <div className="absolute h-full w-full">
                             <img src={card1} alt="card-1" />
 
-                            <button className="flex absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
+                            <button className="flex absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap items-center p-4 gap-2">
                                 <IoStorefrontOutline /> NFT Store
                             </button>
                         </div>
@@ -55,11 +55,8 @@ export default function Arena() {
                     <div className="relative overflow-hidden rounded-3xl border border-white aspect-[16/9] md:col-span-2 transform transition-transform duration-300 hover:scale-[1.02] ">
                         <img src={card6} alt="card 5" />
 
-                        <button className="flex absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
-                            <div className="absolute flex p-4">
-                                <FaExternalLinkAlt />
-                                Buy Now
-                            </div>
+                        <button className="flex absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap items-center p-4 gap-2">
+                            <FaExternalLinkAlt /> Buy Now
                         </button>
                     </div>
                 </div>
