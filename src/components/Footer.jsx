@@ -2,14 +2,14 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
-import illutext from "src/assets/images/illu-text.png"
-import illulogo from "src/assets/images/illu-logo.png"
+import illuText from "../assets/images/illu-text.png"
+import illuLogo from "../assets/images/illu-logo.png"
 
 export default function Footer() {
     return (
         <footer className="flex items-center justify-between lg:mt-[15%] mt-[25%] py-8 lg:px-32 md:px-16 px-8 border-t-[0.3px] border-[#babaff]">
-            <img src={illutext} alt="Illu-Text" className="h-10" />
-            <img src={illulogo} alt="Illu-Logo" className="h-16 md:inline hidden" />
+            <img src={illuText} alt="Illu-Text" className="h-10" />
+            <img src={illuLogo} alt="Illu-Logo" className="h-16 md:inline hidden" />
             <div className="flex gap-4">
                 <div className="flex items-center cursor-pointer">
                     <FaLinkedin/>

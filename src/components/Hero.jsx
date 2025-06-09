@@ -1,6 +1,6 @@
-import hero from "src/assets/videos/hero.mp4"
-import illutext from "src/assets/images/illu-text.png"
-import illulogo from "src/assets/images/illu-logo.png"
+import hero from "../assets/videos/hero.mp4"
+import illutext from "../assets/images/illu-text.png"
+import illulogo from "../assets/images/illu-logo.png"
 
 export default function Hero() {
     return (

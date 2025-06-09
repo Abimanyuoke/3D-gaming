@@ -1,11 +1,11 @@
 import { IoStorefrontOutline } from "react-icons/io5";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import card1 from "src/assets/images/bento-card1.png"
-import card2 from "src/assets/videos/bento-card2.mp4" 
-import card3 from "src/assets/videos/bento-card3.mp4"
-import card4 from "src/assets/videos/bento-card4.mp4"
-import card5 from "src/assets/videos/bento-card5.mp4"
-import card6 from "src/assets/images/bento-card5.png"
+import card1 from "../assets/images/bento-card1.png"
+import card2 from "../assets/videos/bento-card2.mp4" 
+import card3 from "../assets/videos/bento-card3.mp4"
+import card4 from "../assets/videos/bento-card4.mp4"
+import card5 from "../assets/videos/bento-card5.mp4"
+import card6 from "../assets/images/bento-card5.png"
 
 export default function Arena() {
     return (
